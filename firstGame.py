@@ -1,4 +1,5 @@
-computer=-1;
+import random
+
 library={
     "rock":-1,
     "paper":0,
@@ -10,6 +11,7 @@ reversedLibrary={
     1:"scissors"
 }
 while True:
+    computer=random.randint(-1,1);
     player=input("Enter 'exit' to exit\nEnter rock, paper, or scissors: ").lower()
     if player=='exit':
         print("Exiting the game.")
@@ -17,7 +19,7 @@ while True:
     elif player not in library:
         print("Invalid input. Please enter rock, paper, or scissors.")
         continue
-   
+
     print(f"computer chose {reversedLibrary[computer]} and you chose {reversedLibrary[library[player]]}.")
     if library[player] == computer:
         print("It's a tie!")
